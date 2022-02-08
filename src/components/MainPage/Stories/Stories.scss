@@ -1,0 +1,60 @@
+@import "./../../../styles/styles.scss";
+
+.stories {
+  @extend %grey-border;
+  display: flex;
+  padding: 14px 10px 14px;
+  margin-top: 88px;
+  grid-column-gap: 10px;
+  .story {
+    margin-right: 10px;
+    &--author {
+ 
+      text-align: center;
+      margin-top: 2px;
+    }
+    &--gradient {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include round(68px);
+      background-color: #f09433;
+      background: -moz-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+      background: -webkit-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+      background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+    &--white-backgr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      @include round(63px);
+    }
+    &--img {
+      object-fit: cover;
+      @include round(60px);
+    }
+  }
+}

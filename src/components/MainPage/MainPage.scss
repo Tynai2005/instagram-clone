@@ -1,0 +1,13 @@
+@import "../../styles/styles.scss";
+
+.mainpage {
+  display: grid;
+  grid-template-columns: 5fr 2.65fr;
+  &--left {
+    width: 100%;
+  }
+  &--right {
+    width: 100%;
+    position: relative;
+  }
+}

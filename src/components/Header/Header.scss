@@ -1,0 +1,45 @@
+@import "./../../styles/styles.scss";
+
+.header-canvas {
+  @extend %grey-border;
+  position: fixed;
+  background-color: white;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 56px;
+  &--inst-icon img {
+    width: 110px;
+    height: 45px;
+  }
+  &--menu {
+    display: flex;
+    justify-content: space-between;
+    // width: 250px;
+    justify-self: end;
+  }
+  &--icons {
+    height: 24px;
+    width: 24px;
+    margin: 0 11px;
+  }
+  &--search-div {
+    @include daj(flex, space-between, center);
+    background: #efefef;
+    width: 268px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 7px;
+    img{
+      border-radius: 50%;
+      width: 16px;
+    }
+  }
+  &--search {
+    height: 30px;
+    width: 185px;
+  }
+}

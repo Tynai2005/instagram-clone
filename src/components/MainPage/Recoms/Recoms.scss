@@ -1,0 +1,37 @@
+@import "../../../styles/styles.scss";
+
+.recoms {
+  max-height: 432px;
+  overflow-y: hidden;
+  position: fixed;
+  margin-top: 90px;
+  width: 18.7%;
+  &-you,
+  &-other {
+    @include daj(flex, space-between, center);
+  }
+  &-you-info,
+  &-other-info {
+    @include daj(flex, none, center);
+  }
+  &-you img {
+    object-fit: cover;
+    @include round(60px);
+  }
+  &-other img {
+    object-fit: cover;
+    @include round(35px);
+  }
+  &-bluetext {
+    font-size: 0.85715rem;
+  }
+  &-texts {
+    @include daj(flex, space-between, none);
+  }
+  &-footer {
+    li {
+      display: inline;
+      margin-right: 5px;
+    }
+  }
+}
