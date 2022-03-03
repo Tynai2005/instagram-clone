@@ -1,8 +1,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -13,18 +12,30 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+
+body {
+  background-color: white;
+}
+
 .canvas {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .container {
   width: 950px;
+}
+
+.content-container {
+  margin-top: 58px;
 }
 
 input {
@@ -36,24 +47,36 @@ input {
 }
 
 .stories {
-  border: 1px solid lightgray;
+  border: 1px solid gainsboro;
   border-radius: 3px;
 }
 
-.littlefont {
+.font12 {
   font-size: 0.85715rem;
 }
 
-.littlefont2 {
+.font11 {
   font-size: 0.785rem;
 }
 
-.littlefont3 {
+.font10 {
   font-size: 0.715rem;
 }
 
+.font16 {
+  font-size: 1.14285rem;
+}
+
+.font28 {
+  font-size: 2rem;
+}
+
+.thinfont {
+  font-weight: 300;
+}
+
 .boldfont {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 html {
@@ -80,6 +103,14 @@ html {
   color: #0095f6;
 }
 
+.whitetext {
+  color: white;
+}
+
+.redtext {
+  color: #ed4956;
+}
+
 .pt14 {
   padding-top: 14px;
 }
@@ -88,12 +119,40 @@ html {
   padding-bottom: 14px;
 }
 
+.pr14 {
+  padding-right: 14px;
+}
+
 .p0-14 {
   padding: 0 14px;
 }
 
+.p14-0 {
+  padding: 14px 0;
+}
+
+.p28-0 {
+  padding: 28px 0;
+}
+
 .mt8 {
   margin-top: 8px;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
 }
 
 .m14 {
@@ -102,6 +161,10 @@ html {
 
 .mr14 {
   margin-right: 14px;
+}
+
+.mr18 {
+  margin-right: 18px;
 }
 
 .m14-0 {
@@ -120,6 +183,10 @@ html {
   margin-top: 14px;
 }
 
+.mb14 {
+  margin-bottom: 14px;
+}
+
 .ml20 {
   margin-left: 20px;
 }
@@ -132,66 +199,221 @@ html {
   margin-left: 30px;
 }
 
+.mr30 {
+  margin-right: 30px;
+}
+
+.mr35 {
+  margin-right: 35px;
+}
+
+.m20-0 {
+  margin: 20px 0;
+}
+
 .mt30 {
   margin-top: 30px;
 }
 
-.stories {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.mr60 {
+  margin-right: 60px;
+}
+
+.story-gradient {
   display: flex;
-  padding: 14px 10px 14px;
-  margin-top: 88px;
-  grid-column-gap: 10px;
-}
-
-.stories .story {
-  margin-right: 10px;
-}
-
-.stories .story--author {
-  text-align: center;
-  margin-top: 2px;
-}
-
-.stories .story--gradient {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 68px;
-  width: 68px;
-  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   background-color: #f09433;
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
 }
 
-.stories .story--white-backgr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-  height: 63px;
-  width: 63px;
+.autoscroll {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.autoscroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.svg:hover {
+  color: grey;
+  fill: grey;
+}
+
+.icon32 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
 }
 
-.stories .story--img {
+.icon32-gradient {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.icon32-white-backgr {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.icon32-cont {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon44 {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+
+.icon44-gradient {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+}
+
+.icon44-white-backgr {
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
+}
+
+.icon44-cont {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon56 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+.icon56-gradient {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.icon56-white-backgr {
   height: 60px;
   width: 60px;
   border-radius: 50%;
+}
+
+.icon56-cont {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon150 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.icon150-gradient {
+  height: 163px;
+  width: 163px;
+  border-radius: 50%;
+}
+
+.icon150-white-backgr {
+  height: 157px;
+  width: 157px;
+  border-radius: 50%;
+}
+
+.icon150-cont {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories-white-backgr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.blue-button {
+  background-color: #0095f6;
+  padding: 8px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.grey-rounded-button {
+  border: 1px solid #dbdbdb;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.hearticon-little:active {
+  color: red;
+  fill: red;
+}
+
+.grey-border-bottom {
+  border-bottom: 1px solid gainsboro;
+}
+
+.grey-border-top {
+  border-top: 1px solid gainsboro;
+}
+
+.link {
+  color: #00376b;
+  text-decoration: none;
+}
+
+.stories {
+  margin-top: 88px;
+}
+.stories-inner {
+  display: flex;
+  padding: 14px;
+  grid-column-gap: 10px;
+  width: 621px;
+}
+.stories .story {
+  margin-right: 10px;
+}
+.stories .story--author {
+  text-align: center;
+  margin-top: 2px;
 }

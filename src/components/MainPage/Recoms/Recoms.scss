@@ -1,33 +1,35 @@
 @import "../../../styles/styles.scss";
 
 .recoms {
+  margin-top: 100px;
   max-height: 432px;
-  overflow-y: hidden;
+  width: 285px;
   position: fixed;
-  margin-top: 90px;
-  width: 18.7%;
-  &-you,
+  &-you-img-outer {
+    width: 65px;
+    height: 65px;
+    @include daj(flex, center, center);
+  }
   &-other {
+    height: 46px;
     @include daj(flex, space-between, center);
+  }
+  &-you {
+    @include daj(flex, space-between, center);
+    margin-bottom: 24px;
   }
   &-you-info,
   &-other-info {
     @include daj(flex, none, center);
   }
-  &-you img {
-    object-fit: cover;
-    @include round(60px);
-  }
-  &-other img {
-    object-fit: cover;
-    @include round(35px);
-  }
   &-bluetext {
     font-size: 0.85715rem;
   }
   &-texts {
+    margin-bottom: 12px;
     @include daj(flex, space-between, none);
   }
+
   &-footer {
     li {
       display: inline;

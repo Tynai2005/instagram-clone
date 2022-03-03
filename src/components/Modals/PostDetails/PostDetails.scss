@@ -1,0 +1,75 @@
+@import "../../../styles/styles.scss";
+// @import "../../MainPage/Posts/Post/PostCard.scss";
+
+.modal--canvas {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include daj(flex, center, center);
+}
+
+.post-details {
+  &--inner {
+    display: flex;
+  }
+  &--left {
+    max-width: 600px;
+    object-fit: contain;
+    background-color: black;
+    @include daj(flex, center, center);
+  }
+  &--content-images {
+    display: flex;
+    img {
+      max-width: 600px;
+      max-height: 630px;
+    }
+  }
+}
+
+.postcard-details {
+  width: 500px;
+  height: 710px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &--close-arrow {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  &-header--author-point::before {
+    content: "";
+    display: inline-block;
+    @include round(3px);
+    background: black;
+    margin: 7px 14px 4px 14px;
+  }
+  &--descr--top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &--content-comments {
+    height: 461px;
+  }
+  &--content-comment {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &--content-comment-info {
+    display: flex;
+    align-items: center;
+  }
+  &--content-comment-left-n-center {
+    display: flex;
+  }
+}
+
+.postcard {
+  &-descr--likes-count {
+  }
+}

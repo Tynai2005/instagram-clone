@@ -3,6 +3,7 @@ import Posts from "./Posts/Posts";
 import "./MainPage.css";
 import Stories from "./Stories/Stories";
 import Recoms from "./Recoms/Recoms";
+import Modals from "../Modals/Modals";
 
 const MainPage = () => {
   return (
@@ -16,6 +17,7 @@ const MainPage = () => {
           <div className="mainpage--right">
             <Recoms />
           </div>
+          <Modals />
         </div>
       </div>
     </div>

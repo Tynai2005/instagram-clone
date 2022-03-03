@@ -1,0 +1,41 @@
+@import "../../styles/styles.scss";
+
+.profile {
+  margin-top: 90px;
+  .profile--header {
+    display: flex;
+    margin-bottom: 44px;
+    &-left {
+      width: 290px;
+      display: flex;
+      justify-content: center;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .profile--body {
+    display: flex;
+    justify-content: center;
+    &-titles {
+      display: flex;
+    }
+    &-titles:nth-child(even) {
+      margin-right: 40px;
+    }
+    &-titles > div {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      svg {
+        margin-right: 5px;
+      }
+    }
+    &-title-checked {
+      border-top: 1px solid #000;
+    }
+  }
+}

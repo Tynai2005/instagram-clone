@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container">
         <div className="header">
           <div className="header--inst-icon">
-            <img src={insttxt} alt="" />
+            <img className="pointer" src={insttxt} alt="" />
           </div>
           <div className="header--search-div">
             <svg
@@ -53,7 +53,7 @@ const Header = () => {
             <img className="" src={close} alt="" />
           </div>
           <div className="header--menu">
-            <div className="header--icons header--home-icon">
+            <div className="header--icons pointer header--home-icon">
               <svg
                 aria-label="Главная страница"
                 class="_8-yf5 "
@@ -67,7 +67,7 @@ const Header = () => {
                 <path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path>
               </svg>
             </div>
-            <div className="header--icons header--messages-icon">
+            <div className="header--icons pointer header--messages-icon">
               <svg
                 aria-label="Messenger"
                 class="_8-yf5 "
@@ -91,7 +91,7 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            <div className="header--icons header--newpost-icon">
+            <div className="header--icons pointer header--newpost-icon">
               <svg
                 aria-label="Новая публикация"
                 class="_8-yf5 "
@@ -134,7 +134,7 @@ const Header = () => {
                 ></line>
               </svg>
             </div>
-            <div className="header--icons header--compass-icon">
+            <div className="header--icons pointer header--compass-icon">
               <svg
                 aria-label="Найти людей"
                 class="_8-yf5 "
@@ -169,7 +169,7 @@ const Header = () => {
                 ></circle>
               </svg>
             </div>
-            <div className="header--icons header--heart-icon">
+            <div className="header--icons pointer header--heart-icon">
               <svg
                 aria-label="Что нового"
                 class="_8-yf5 "
@@ -183,7 +183,7 @@ const Header = () => {
                 <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path>
               </svg>
             </div>
-            <div className="header--icons header--profile-icon">
+            <div className="header--icons pointer header--profile-icon">
               <img src={prof} alt="" />
             </div>
           </div>

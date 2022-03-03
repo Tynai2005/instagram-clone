@@ -1,0 +1,17 @@
+@import "../../../styles/styles.scss";
+
+.postshare {
+  &--inner {
+    width: 550px;
+  }
+  &--input::placeholder {
+    color: silver;
+  }
+  &--recoms {
+    max-height: 270px;
+  }
+  &--checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}

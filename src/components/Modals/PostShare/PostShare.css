@@ -1,4 +1,20 @@
-@import "../nullstyles/nullstyles.scss";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
 
 * {
   font-family: "Roboto", sans-serif !important;
@@ -13,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .container {
   width: 950px;
 }
@@ -27,11 +44,6 @@ input {
   background: none;
   outline: none;
   padding: 0;
-}
-
-%grey-border {
-  border: 1px solid gainsboro;
-  border-radius: 3px;
 }
 
 .font12 {
@@ -60,18 +72,6 @@ input {
 
 .boldfont {
   font-weight: 600;
-}
-
-@mixin round($s) {
-  height: $s;
-  width: $s;
-  border-radius: 50%;
-}
-
-@mixin daj($a, $b, $c) {
-  display: $a;
-  justify-content: $b;
-  align-items: $c;
 }
 
 html {
@@ -219,41 +219,18 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #f09433;
-  background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
 }
 
 .autoscroll {
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
+}
+.autoscroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .pointer {
@@ -270,83 +247,121 @@ html {
 }
 
 .icon32 {
-  object-fit: cover;
-  @include round(32px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
 }
 
 .icon32-gradient {
-  @include round(40px);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 .icon32-white-backgr {
-  @include round((35px));
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
 }
 
 .icon32-cont {
   width: 40px;
   height: 40px;
-  @include daj(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon44 {
-  object-fit: cover;
-  @include round(44px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
 }
 
 .icon44-gradient {
-  @include round(52px);
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
 }
 
 .icon44-white-backgr {
-  @include round((47px));
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
 }
 
 .icon44-cont {
   width: 52px;
   height: 52px;
-  @include daj(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon56 {
-  object-fit: cover;
-  @include round(56px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
 }
 
 .icon56-gradient {
-  @include round(65px);
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
 }
 
 .icon56-white-backgr {
-  @include round((60px));
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
 
 .icon56-cont {
   width: 65px;
   height: 65px;
-  @include daj(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon150 {
-  object-fit: cover;
-  @include round(150px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .icon150-gradient {
-  @include round(163px);
+  height: 163px;
+  width: 163px;
+  border-radius: 50%;
 }
 
 .icon150-white-backgr {
-  @include round((157px));
+  height: 157px;
+  width: 157px;
+  border-radius: 50%;
 }
 
 .icon150-cont {
   width: 150px;
   height: 150px;
-  @include daj(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stories-white-backgr {
-  @include daj(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
 }
 
@@ -379,4 +394,24 @@ html {
 .link {
   color: #00376b;
   text-decoration: none;
+}
+
+.postshare--inner {
+  width: 550px;
+}
+.postshare--input::-moz-placeholder {
+  color: silver;
+}
+.postshare--input:-ms-input-placeholder {
+  color: silver;
+}
+.postshare--input::placeholder {
+  color: silver;
+}
+.postshare--recoms {
+  max-height: 270px;
+}
+.postshare--checkbox {
+  width: 20px;
+  height: 20px;
 }
